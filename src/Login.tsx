@@ -79,6 +79,9 @@ const Login = () => {
       setStatus({ text: "Please enter username and password", color: "red" });
     }
   };
+  if (isAuthenticated) {
+    return <div>Redirection...</div>;
+  }
   return (
     <div className="container mx-auto">
       <form onSubmit={handleSubmit} className="flex flex-col mt-10 gap-4">

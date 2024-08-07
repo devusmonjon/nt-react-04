@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  deleteUser,
-  getUsers,
-  login,
-  tokenRefresh,
-} from "./service/api.service";
-import { ILogin } from "./interfaces/auth.interface";
+import { deleteUser, getUsers, tokenRefresh } from "./service/api.service";
 import useAuthStore from "./store/auth.store";
 import { Link, useNavigate } from "react-router-dom";
 import { IUser } from "./interfaces/user.interface";
@@ -70,7 +64,6 @@ const App = () => {
     e.target.disabled = true;
     const response = await deleteUser(id, accessToken);
     if (response === 204) {
-      const responseUsers = await getUsers(accessToken);
       setUsers((prev) => prev.filter((user) => user?.id !== id));
     }
   };

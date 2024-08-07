@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { login, register, tokenRefresh } from "./service/api.service";
-import { ILogin, IRegister } from "./interfaces/auth.interface";
+import { register, tokenRefresh } from "./service/api.service";
+import { IRegister } from "./interfaces/auth.interface";
 import useAuthStore from "./store/auth.store";
 import { Link, useNavigate } from "react-router-dom";
 

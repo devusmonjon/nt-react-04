@@ -5,6 +5,7 @@ import Login from "./Login.tsx";
 import Register from "./Register.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Users from "./Users.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <h1>404 not found</h1>,
+  },
+  {
+    path: "/users/:id",
+    element: <Users />,
   },
 ]);
 

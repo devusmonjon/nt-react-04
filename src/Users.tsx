@@ -10,7 +10,6 @@ const Users = () => {
 
   const {
     isAuthenticated,
-    accessToken,
     setIsAuthenticated,
     setAccessToken,
     setRefreshToken,
